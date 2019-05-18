@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/Neuzeit-Grotesk-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/Neuzeit-Grotesk-Light.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/Neuzeit-Grotesk.otf);
+  font-weight: 400;
+}
+
+#cart-button {
+  display: none;
+}
+
+.ember-application.home.index .header__inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company__beta-logo {
+  margin: 60px;
+}
+
+.nav.nav--top .ember-view{
+  position: absolute;
+  right: 32px;
+}
+
+.header.header--microsite {
+  padding: 14px 32px;
+}
+
+.top-bar-section ul li a {
+  color: #17224d;
+  font-weight: bold;
+}
+
+.top-bar-section ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: -10px;
+    background: #17224d;
+    transition: width .3s;
+}
+
+.top-bar-section ul li a:hover::after,
+.top-bar-section ul li a:focus::after{
+    width: 100%;
+}
+
+.ember-view.top-bar {
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .company__beta-logo {
+  max-width: 400px;
+}
+
+.top-bar-section {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .header .company__beta-logo {
+    display: none;
+  }
+  .header.header--microsite {
+    padding: 0;
+    height: auto;
+  }
+  .toggle-topbar.menu-icon button span span {
+    display: none;
+  }
+  .ember-view.top-bar.expanded {
+    width: 100%;
+    text-align: center;
+  }
+  .toggle-topbar.menu-icon {
+    text-align: left;
+  }
+  .top-bar-section {
+    float: none;
+  }
+  .top-bar-section ul li a::after {
+    display: none;
+  }
+  .top-bar .toggle-topbar.menu-icon button span:after {
+    box-shadow: 0 0 0 1px #808582, 0 7px 0 1px #808582, 0 14px 0 1px #808582;
+  }
+}
