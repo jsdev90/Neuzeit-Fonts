@@ -20,28 +20,100 @@
   display: none;
 }
 
-.ember-application.home.index .header__inner{
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p {
+  font-family: Neuzeit Grotesk !important;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.ember-application.home .header__inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.company__beta-logo {
+.ember-application.home.index .header__inner{
+  flex-direction: column;
+}
+
+.ember-application.home .header__inner img.ember-view.home,
+.ember-application.home.index .header__inner img.ember-view.other{
+  display: none;
+}
+
+.ember-application.home .header__inner img.ember-view.other,
+.ember-application.home.index .header__inner img.ember-view.home{
+  display: block;
+}
+
+.ember-application.home .header__inner img.ember-view.mobile-home,
+.ember-application.home .header__inner img.ember-view.mobile-other {
+  display: none;
+}
+
+.ember-application.home.index .company__beta-logo {
   margin: 60px;
+  text-align: center;
 }
 
-.nav.nav--top .ember-view{
-  position: absolute;
-  right: 32px;
+.header__inner .nav.nav--top {
+  /*position: absolute;*/
+  /*right: 1rem;*/
+  /*top: 14px;*/
+  /*z-index: 1;*/
+  display: none;
 }
 
-.header.header--microsite {
+.ember-application.home .header.header--microsite{
+  padding: 2px 32px;
+  background-color: #e6e7e8;
+}
+
+.ember-application.home.index .header.header--microsite {
   padding: 14px 32px;
-}
+  background-color: #ffffff;
+}    
 
-.top-bar-section ul li a {
+.ember-application.home .top-bar-section ul li a {
   color: #17224d;
   font-weight: bold;
+  font-size: 15px;
+}
+
+.ember-application.home .top-bar-section ul li,
+.ember-application.home .top-bar-section ul li a {
+  background-color: #e6e7e8;
+}
+
+.ember-application.home .top-bar-section ul li a:hover,
+.ember-application.home .top-bar-section ul li a:focus {
+  background-color: #e6e7e8;
+}
+
+.ember-application.home .expanded .top-bar-section ul li,
+.ember-application.home .expanded .top-bar-section ul li a {
+  background-color: #ffffff;
+}
+
+.ember-application.home.index .top-bar-section ul li a:hover {
+  background-color: #ffffff;
+}
+
+.ember-application.home.index .top-bar-section ul li,
+.ember-application.home.index .top-bar-section ul li a {
+  background-color: #ffffff;
+}
+
+.top-bar-section .has-dropdown>a:after {
+  margin-top: -4px;
 }
 
 .top-bar-section ul li a::after {
@@ -54,9 +126,45 @@
     transition: width .3s;
 }
 
+.top-bar-section .dropdown li:nth-child(7) a,
+.top-bar-section .dropdown li:nth-child(10) a,
+.top-bar-section .dropdown li:nth-child(13) a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  padding-left: 1.5rem !important;
+}
+
+.top-bar-section .dropdown li:nth-child(4) a,
+.top-bar-section .dropdown li:nth-child(16) a,
+.top-bar-section .dropdown li:nth-child(19) a {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.top-bar-section ul li.has-dropdown a::after {
+  border-color: hsla(180,0%,59%,.4) transparent transparent;
+  background: none;
+}
+
 .top-bar-section ul li a:hover::after,
 .top-bar-section ul li a:focus::after{
     width: 100%;
+}
+
+.top-bar-section ul li.has-dropdown a:hover::after,
+.top-bar-section ul li.has-dropdown a:focus::after{
+    width: 0;
+}
+
+.header__inner a {
+  font-family: 'Neuzeit Grotesk';
+}
+
+.header__inner a:focus {
+  /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .ember-view.top-bar {
@@ -64,24 +172,999 @@
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+.ember-application.home .ember-view.top-bar {
+  justify-content: flex-end;
+  background-color: #e6e7e8;
+}
+
+.ember-application.home.index .ember-view.top-bar {
   justify-content: center;
+  background-color: #ffffff;
 }
 
 .header .company__beta-logo {
+  max-width: none;
+  max-height: none;
+}
+
+.ember-application.home .header .company__beta-logo .company-logo__container,
+.ember-application.learn.dashboard .header .company__beta-logo .company-logo__container {
+  background-size: contain;
+  background-image: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/Logo/Small_Logos/One_Line/Navy/MCVE_Small_Logo_One_Line_Navy.png);
+  background-repeat: no-repeat;
   max-width: 400px;
+  height: 40px;
+  background-position: center;
+}
+
+.ember-application.home .header .company__beta-logo .company-logo__container img,
+.ember-application.learn.dashboard .header .company__beta-logo .company-logo__container img {
+  visibility: hidden;
+}
+
+.ember-application.home.index .header .company__beta-logo .company-logo__container {
+  background-image: none;
+  max-width: none;
+  height: auto;
+}
+
+.ember-application.home.index .header .company__beta-logo .company-logo__container img {
+  visibility: visible;
+}
+
+.ember-application.home.index .header .company__beta-logo .company-logo__container img {
+  max-height: none;
+}
+
+.ember-application.home.index .header .company__beta-logo .company-logo__container img {
+  max-width: none;
+  width: 54%;
+}
+
+.ember-application.home.index .widget--featured-content {
+  padding: 0 110px;
+}
+
+.header .company__beta-logo .company-logo__container img {
+  max-height: none;
+  margin: auto;
 }
 
 .top-bar-section {
   float: right;
 }
 
-@media (max-width: 768px) {
-  .header .company__beta-logo {
-    display: none;
+.whats-new-home {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.whats-new-home img {
+  width: 80px;
+}
+
+.whats-new-home h1 {
+  font-size: 33px;
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #17224d;
+}
+
+.category-row {
+  padding: 50px !important;
+  padding-bottom: calc(50px + 1rem) !important;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 218px;
+  height: 241px;
+}
+
+.category-item h1 {
+  margin: 25px 0;
+  font-size: 27px;
+  text-transform: uppercase;
+  color: #17224d;
+  font-family: Neuzeit Grotesk !important;
+}
+
+.category-item p {
+  font-size: 17px;
+  max-width: 305px;
+  margin: auto;
+  color: #17224d;
+  font-family: 'Neuzeit Grotesk';
+}
+
+.category-item button {
+  background-color: #DBE62D;
+  color: #19224D;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 20px 0;
+  font-family: 'Neuzeit Grotesk';
+}
+
+.footer__company__info {
+  display: none;
+}
+
+.footer {
+  background-color: #D9D9D6;
+}
+
+.footer__links {
+  padding: 30px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer__links .link a:hover {
+  text-decoration: underline;
+}
+
+.footer .link a {
+  margin: 0 20px;
+  color: #838383;
+  font-weight: bold;
+}
+
+.social__links {
+  display: flex;
+  align-items: center;
+}
+
+.social__links a {
+  color: #747474;
+  border-radius: 23px;
+  background-color: white;
+  margin: 0 30px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+}
+
+.contact__address span {
+  font-size: 12px;
+  padding: 2px 0;
+  color: #838383;
+}
+
+.ember-application.home.index .home__content {
+  padding-bottom: 80px;
+}
+
+.ember-application.home.index .home__content .layout__content .widget--html {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.ember-application.home.index .home__content .layout__content .widget--html .home-background {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/img/bg.svg);
+  background-repeat: no-repeat;
+  background-size: 474px 378px;
+  background-position: left 0px top -65px; 
+}
+
+/*.course-row {
+  padding: 0 100px;
+  display: none;
+}*/
+
+.course-item {
+  max-width: 370px;
+  margin: 20px auto;
+  box-shadow: 3px 5px 3px 0px rgba(0,0,0,0.14);
+}
+
+.course-item .course-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.course-item img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-content .__category {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  color: #17224d;
+}
+
+.course-content h1,
+.featured-content-article-item__body .featured-content-article-item__title {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #17224d;
+  font-family: Neuzeit Grotesk !important;
+  margin: 5px 0;
+}
+
+.featured-content-article-item__body .featured-content-article-item__title {
+  margin: 15px 0;
+}
+
+.catalog-course-hader {
+  font-size: 49px;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.ember-application.home.catalog .home__content {
+  padding: 0 120px;
+  position: relative;
+}
+
+.ember-application.home.catalog .home__content .catalog-bg {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.catalog-filters {
+  z-index: 999;
+  position: relative;
+}
+
+.catalog-search input::placeholder,
+.catalog-filters__selections select,
+.catalog-filters__sort select,
+.catalog-active-filter {
+  font-weight: 200;
+  font-size: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #808285;
+}
+
+.catalog-active-filter {
+  line-height: 46px;
+  padding: 0;
+}
+
+.catalog-search input::placeholder {
+  color: #bcbec0;
+}
+
+.catalog-aggregation {
+  margin-top: 1rem;
+}
+
+.course-content .__desc {
+  font-size:15;
+  text-align: left;
+  padding-right: 20px;
+  color: #17224d;
+}
+
+.course-content button {
+  color: #17224d;
+  font-size: 13px;
+  text-transform: uppercase;
+  background-color: #dbe62d;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+}
+
+/*.course-title {
+  display: none;
+}*/
+
+.course-title h2.widget__title {
+  font-size: 49px;
+  font-weight: bold;
+  color: #17224d;
+  font-family: Neuzeit Grotesk !important;
+  margin: 15px 0;
+}
+
+/*.course-title .row {
+  display: none;
+}*/
+
+.catalog-search-bar {
+  width: calc(100% - 80px);
+  margin-left: 72px;
+}
+
+.widget--catalog h3.catalog-header {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+  color: #808285;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 0;
+  margin: 0;
+  padding-left: 1rem;
+  line-height: 46px;
+}
+
+.widget--featured-content .catalog-item {
+  box-shadow: 2.16px 5.04px 2.88px rgba(0, 0, 0, 0.14);
+}
+
+.widget--featured-content .catalog-item .featured-content-article-item {
+  background-color: #ffffff;
+}
+
+.featured-content-article-item__body .featured-content-article-item__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 15px;
+  font-family: Neuzeit Grotesk;
+  color: #17224d;
+  margin: 0;
+}
+
+.widget--catalog {
+  min-height: 50vh;
+}
+
+/*.ember-view.catalog-aggregation {
+  display: none;
+}*/
+
+/*.medium-9.columns.js-results-holder {
+  height: auto;
+  float: none;
+  margin: auto;
+  width: 85%;
+  padding-top: 120px;
+}*/
+
+.catalog-grid-item__price,
+.catalog-grid-item__suggested-price {
+  display: none;
+}
+
+.medium-9.columns.js-results-holder {
+  position: relative;
+  z-index: 999;
+}
+
+.medium-9.columns.js-results-holder ul li {
+  padding: 17px;
+}
+
+.medium-9.columns.js-results-holder ul li a {
+  box-shadow: 2.16px 5.04px 2.88px rgba(0, 0, 0, 0.14);
+}
+
+.catalog-grid-item__cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*position: absolute;
+  width: calc(100% - 48px + 1rem);
+  left: 1rem;
+  bottom: 1.5rem;*/
+}
+
+.catalog-grid-item__cta-container span {
+  color: #17224d !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0 30px !important;
+  background: #dbe62d !important;
+  font-family: Neuzeit Grotesk !important;
+  line-height: 30px;
+  height: 30px;
+  margin-top: 1.5rem;
+}
+
+.catalog-grid-item__title {
+  color: #17224d;
+  font-family: Neuzeit Grotesk !important;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 68px;
+}
+
+.catalog-grid-item__body {
+  padding: 1.5rem;
+  /*min-height: 235px;*/
+}
+
+.catalog-grid-item__body hr {
+  display: none;
+}
+
+.catalog-search__button {
+  background-color: #dbe62d;
+}
+
+.catalog-search__button i {
+  color: white;
+}
+
+.catalog-grid-item__body strong {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #17224d;
+  font-family: Neuzeit Grotesk;
+  display: none;
+}
+
+.catalog-grid-item__body .catalog-grid-item__description {
+  font-size: 15px;
+  color: #17224d;
+}
+
+.ember-view.row.widget.widget--hr h2.widget__title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+  margin: 0;
+  color: #17224d;
+  position: absolute;
+  width: 100%;
+  top: 160px;
+}
+
+.ember-view.row.widget.widget--hr hr {
+  display: none;
+}
+
+.link-to-home {
+  display: none;
+}
+
+.career-pathing-header h2.widget__title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+  margin: 0;
+  color: #17224d;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.career-pathing-header p.widget__subtitle {
+  max-width: 46%;
+  margin: auto;
+  color: #17224d;
+}
+
+.layout__content--career-pathing.layout__content {
+  padding: 5rem 8rem;
+  position: relative;
+}
+
+/* Sofie page start*/
+
+.ember-application.home.page .widget--two-column .row .medium-6.columns {
+  padding: 60px 120px;
+}
+
+.ember-application.home.page hr {
+  border: 1px solid #d9d9d6;
+  width: calc(100% - 200px);
+  margin: auto;
+}
+
+.ember-application.home.page .sofie-text h1 {
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+}
+
+.ember-application.home.page .sofie-text.testimonial-box {
+  position: relative;
+  border: 2px solid #dbe62d;
+  padding: 60px 40px;
+}
+
+.ember-application.home.page .sofie-text.testimonial-box .icon-quote {
+  position: absolute;
+  top: -27px;
+  color: #dbe62d;
+  font-weight: bold;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.ember-application.home.page .sofie-text.testimonial-box p {
+  margin: 0;
+}
+
+.ember-application.home.page .sofie-text.testimonial-box h3 {
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+}
+
+.ember-application.home.page .sofie-text p {
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d; 
+}
+
+.ember-application.home.page .sofie-text.last-column h1 {
+  max-width: 90%;
+}
+
+.ember-application.home.page .sofie-text button {
+  background-color: #dbe62d;
+  color: #17224d;
+  text-transform: uppercase;
+  font-family: Neuzeit Grotesk !important;
+}
+
+/* Sofie page end*/
+
+.ember-application.home.page .container .home__content {
+  background-image: none;
+}
+
+/*Partners page*/
+
+.layout__content--partners {
+  position: relative;
+  padding-bottom: 150px;
+}
+
+.layout__content--partners .background-img {
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  left: -1rem;
+}
+
+.layout__content--partners h1.h2.widget__title,
+.layout__content--communities h1.h2.widget__title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+  margin-top: 80px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.layout__content--partners .widget__subtitle,
+.layout__content--communities .widget__subtitle {
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+  max-width: 33%;
+  margin: 0 auto;
+}
+
+.layout__content--partners .widget--three-column .row {
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+}
+
+.layout__content--partners .row .ember-view.editor-content {
+  text-align: center;
+  padding: 35px;
+}
+
+.layout__content--partners .ember-view.editor-content img {
+  max-height: 150px;
+}
+
+/*Partners page end*/
+
+.layout__content--communities {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.layout__content--communities .background-img,
+.layout__content--career-pathing .background-img {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 35%;
+}
+
+.layout__content--communities .widget--two-column {
+  padding: 0 100px;
+}
+
+.layout__content--communities .forum-column {
+  text-align: center;
+  padding: 40px 60px;
+  min-height: 550px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.layout__content--communities .medium-6.columns {
+  padding: 45px !important;
+}
+
+.layout__content--communities .forum-column img {
+  width: 120px;
+}
+
+.layout__content--communities .forum-column h3,
+.layout__content--communities .forum-column h1 {
+  margin: 18px 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: Neuzeit Grotesk !important;
+  color: #17224d;
+}
+
+.layout__content--communities .forum-column h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.layout__content--communities .forum-column p {
+  text-align: left;
+  color: #17224d;
+}
+
+.layout__content--communities .forum-column button {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #17224d;
+  background-color: #dbe62d;
+  width: 34%;
+  left: 33%;
+  position: absolute;
+  bottom: 12px;
+}
+
+.pathing-item {
+  padding: 2rem 2.5rem;
+  margin: 0 1rem;
+  text-align: center;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: 425px;
+}
+
+.pathing-item img {
+  width: 120px;
+}
+
+.pathing-item h1 {
+  text-align: left;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  color: #17224d;
+}
+
+.pathing-item p {
+  text-align: left;
+  color: #17224d;
+}
+
+.pathing-item button {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 150px;
+  left: calc(50% - 75px);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #17224d;
+  background-color: #dbe62d;
+}
+
+
+
+.top-bar-section .dropdown {
+  z-index: 9999 !important;
+}
+
+/*.ember-view.application.application--admin .form .btn.btn--left.btn--small.btn--submit.btn--primary--manager {
+  text-indent: -150px;
+  padding: 4px 30px;
+}
+
+.ember-view.application.application--admin .form .btn.btn--small.btn--left.btn--bare {
+  color: #ffffff;
+}
+
+.ember-view.application.application--admin .form .btn.btn--small.btn--left.btn--bare::before {
+  color: #000000;
+  content: "\E60C";
+  font-family: ti-icons-rev2;
+  font-size: 18px;
+  position: absolute;
+  top: 4px;
+}
+
+.ember-view.application.application--admin .form .btn--primary--manager::before {
+  content: "\E6A0";
+  font-size: 18px;
+  color: #ffffff;
+  font-family: ti-icons-rev2;
+  position: absolute;
+  right: 20px;
+  text-indent: 150px;
+}*/
+
+.dashboard-header-dropdown__link .dashboard-header__name {
+  font-family: Neuzeit Grotesk;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+a img {
+  filter: grayscale(100%);
+}
+
+.widget.widget--course-purchase a {
+  background-color: #dbe62d;
+  color: #17224d;
+  font-family: Neuzeit Grotesk !important;
+  border-color: #d3d4de;
+}
+
+.widget.widget--course-purchase a:hover {
+  border-color: #d3d4de;
+  background-color: #dbe62d;
+  color: #17224d;
+}
+
+.widget--course-purchase button {
+  display: none;
+}
+
+/*.ember-application.learn.dashboard .header.header--dashboard .header__inner .company__beta-logo {
+  position: absolute;
+  transform: translate(62.5%, 0);
+  margin: 60px;
+}
+
+.ember-application.learn.dashboard .header--dashboard {
+  height: 15rem;
+}
+*/
+.ember-application.learn.dashboard .ember-view.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  position: absolute;
+  top: -63px;
+  right: 264px;
+}
+
+.learn.dashboard .widget.widget--navbar {  
+  padding: 0 2rem;
+}
+
+.ember-application.learn.dashboard .navigation-bar .top-bar-section ul.left {
+  border: none;
+}
+
+.ember-application.learn.dashboard .navigation-bar .top-bar-section ul.left li a {
+  line-height: 40px;
+}
+
+.ember-application.learn.dashboard .navigation-bar .top-bar-section ul.left li {
+  box-shadow: none;
+}
+
+.ember-application.learn.dashboard .navigation-bar .top-bar-section ul li.has-dropdown a::after {
+  margin-top: 0;
+}
+
+.ember-application .nav.nav--global-links {
+  display: none;
+}
+
+.header.header--student.header--learner .course-title {
+  color: navy;
+}
+
+.ember-application.learn.dashboard .hero__caption {
+  display: none;
+}
+
+.catalog-active-filter__remove {
+  color: #17224d;
+}
+
+@media (min-width: 1440px) {
+ .container {
+    max-width: 1440px;
+    margin: auto;
+  }  
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 100%;
   }
+
+  .layout__content--career-pathing.layout__content {
+    padding: 5rem 0;
+  }
+
+  .career-pathing-header p.widget__subtitle {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .ember-application.home .top-bar-section ul li a {
+    font-size: 9px;
+    padding: 0 5px;
+  }
+
+  .ember-application.home.index .top-bar-section ul li a {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .ember-application.learn.dashboard .dashboard-header__name {
+    font-size: 11px;
+    padding-top: 7px;
+  }
+
+  .ember-application.learn.dashboard .dashboard-header__avatar span {
+    width: 25px;
+    height: 25px;
+  }
+
+  .ember-application.learn.dashboard .ember-view.top-bar {
+    top: -45px;
+    right: 215px;
+  }
+
+  .ember-application.learn.dashboard .header .company__beta-logo .company-logo__container {
+    max-width: 210px;
+  }
+
+  .ember-application.learn.dashboard .navigation-bar .top-bar-section ul.left li a {
+    font-size: 11px;
+  }
+
+  .pathing-item {
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+
+  .layout__content--communities .widget--two-column {
+    padding: 0 1rem;
+  }
+
+  .layout__content--communities .medium-6.columns {
+    padding: 1rem !important;
+  }
+
+  .layout__content--communities .forum-column h3, .layout__content--communities .forum-column h1 {
+    font-size: 16px;
+  }
+
+  .layout__content--communities .forum-column h1 {
+    margin: 12px 0;
+    font-size: 20px;
+  }
+
+  .layout__content--communities .forum-column button {
+    font-size: 12px;
+  }
+
+  .layout__content--partners .widget__subtitle, .layout__content--communities .widget__subtitle {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 960px) {
+  .ember-application.learn.dashboard .ember-view.top-bar {
+    right: 185px;
+  }
+
+  .ember-application.learn.dashboard .navigation-bar .top-bar-section ul.left li {
+    padding: 0 5px;
+  }
+
+  .pathing-item {
+    min-height: 450px;
+  }
+
+}
+
+@media (max-width: 768px) {
   .header.header--microsite {
     padding: 0;
-    height: auto;
+    /*height: auto;*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 99999;*/
+    background-color: #ffffff;
+  }
+
+  .ember-application.home.catalog .home__content {
+    padding: 0;
+  }
+
+  .catalog-course-hader {
+    padding-top: 80px;
+    font-size: 29px;
+  }
+
+  .catalog-search-bar {
+     width: 100%; 
+     margin-left: 0; 
+  }
+
+  .ember-application.home .top-bar-section ul li a,
+  .ember-application.home.index .top-bar-section ul li a {
+    font-size: 15px;
+    padding: 0 1rem;
+  }
+
+  .ember-application.home .header .company__beta-logo .company-logo__container img {
+    display: none;
+  }
+
+  .ember-application.home .header.header--microsite {
+    background: #ffffff;
+    padding: 0 !important;
+  }
+
+  .header__inner .nav.nav--top {
+    right: 0;
+  }
+  .ember-application.home.index .company__beta-logo {
+    /*margin: 30px;*/
+    display: none;
+  }
+
+  .ember-application.home.index .widget--featured-content {
+    padding: 0 55px;
   }
   .toggle-topbar.menu-icon button span span {
     display: none;
@@ -96,10 +1179,308 @@
   .top-bar-section {
     float: none;
   }
+
+  .ember-view.top-bar {
+    display: block;
+  }
+
+  .ember-application.home .ember-view.top-bar {
+    background: #ffffff;
+  }
+
+  .ember-view.row.widget.widget--hr h2.widget__title {
+    position: initial;
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
+  .medium-9.columns.js-results-holder {
+    padding-top: 15px;
+  }
+
+  .home__content {
+    position: relative;
+  }
+
+  .link-to-home {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .link-to-home a {
+    width: 171px;
+    height: 70px;
+    display: block;
+    margin: auto;
+  }
+
+  .widget--catalog h3.catalog-header {
+    display: none;
+  }
+
   .top-bar-section ul li a::after {
     display: none;
   }
+
+  .ember-application.home.index .header .company__beta-logo .company-logo__container img {
+    width: 80%;
+    margin-top: 15px;
+  }
+
+  .ember-application.home .home__content {
+    padding-top: 80px;
+    background-image: url(https://cdn.jsdelivr.net/gh/urchindev/Neuzeit-Fonts/Logo/Small_Logos/Three_Lines/Navy/MCVE_Small_Logo_Three_Lines_Navy.png);
+    background-repeat: no-repeat;
+    background-size: 171px 48px;
+    background-position: center 15px;
+  }
+
+  .ember-application.home.index .home__content {
+    padding-top: 100px;
+  }
+
   .top-bar .toggle-topbar.menu-icon button span:after {
     box-shadow: 0 0 0 1px #808582, 0 7px 0 1px #808582, 0 14px 0 1px #808582;
+  }
+  .ember-application.home .header__inner img.ember-view.mobile-home,
+  .ember-application.home .header__inner img.ember-view.mobile-other {
+    display: block;
+  }
+  
+  .ember-application.home .header__inner img.ember-view.mobile-home,
+  .ember-application.home.index .header__inner img.ember-view.mobile-other{
+    display: none;
+  }
+  
+  .ember-application.home .header__inner img.ember-view.other,
+  .ember-application.home .header__inner img.ember-view.home {
+    display: none !important;
+  }
+  
+  .ember-application.home .header__inner img.ember-view.mobile-other,
+  .ember-application.home.index .header__inner img.ember-view.mobile-home {
+    display: block;    
+  }
+
+  .ember-application.home .header__inner img.ember-view.mobile-other {
+    max-width: 50%;
+    margin: 50px auto;
+  }
+  
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+  }
+  
+  .footer .link {
+    padding: 3px 0;
+  }
+
+  .company__beta-logo {
+    display: none !important;
+  }
+
+  .top-bar-section {
+    display: none;
+  }
+
+  .top-bar.expanded .top-bar-section {
+    display: block;
+  }
+
+  .top-bar {
+    height: 0;
+    overflow: visible;
+  }
+
+  .top-bar .toggle-topbar.menu-icon {
+    width: 50px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .ember-application.home.page .widget--two-column .row .medium-6.columns {
+    padding: 3rem;
+  }
+
+  .layout__content--partners .widget__subtitle,
+  .layout__content--communities .widget__subtitle {
+    max-width: 50%;
+  }
+
+  .layout__content--partners .widget--three-column .row {
+    padding: 1rem;
+  }
+
+  .layout__content--partners .row .ember-view.editor-content {
+    padding: 15px;
+  }
+
+  .layout__content--partners h1.h2.widget__title,
+  .layout__content--communities h1.h2.widget__title {
+    margin-top: 15px;
+  }
+
+  .layout__content--partners {
+    padding-bottom: 30px;
+  }
+
+  .ember-application.home.catalog .home__content .catalog-bg {
+    display: none;
+  }
+
+  .catalog-search__button {
+    height: 34px;
+    right: 1rem;
+  }
+
+  .ember-application.learn.dashboard .ember-view.top-bar {
+    top: -30px;
+    left: -1rem;
+    right: auto;
+    display: block;
+    width: calc(100% + 1rem);
+    z-index: 1;
+    background: white;
+  }
+
+  .ember-application.learn.dashboard .header--dashboard {
+    height: auto;
+  }
+
+  .layout__content--career-pathing.layout__content {
+    padding: 0;
+  }
+
+  .pathing-item {
+    margin: 1rem 0;
+    min-height: 370px;
+  }
+
+  .career-pathing-header p.widget__subtitle {
+    max-width: 75%;
+  }
+
+  .layout__content--communities .forum-column {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ember-application.home.index .header .company__beta-logo .company-logo__container img {
+    width: 100%;
+  }
+
+  .ember-application.home.index .home__content .layout__content .widget--html .home-background {
+    background-image: none;
+  }
+
+  .catalog-grid-item__body {
+    padding: 1rem;
+    /*min-height: 200px;*/
+  }
+
+  /*.catalog-grid-item__cta-container {
+    bottom: 1rem;
+  }*/
+
+  .category-item img {
+    width: 100px;
+    height: 116px;
+  }
+
+  .category-item h1 {
+    font-size: 21px;
+    margin: 20px 0;
+  }
+
+  .category-item p {
+    font-size: 13px;
+  }
+
+  .category-item button {
+    font-size: 12px;
+  }
+
+  .whats-new-home img {
+    width: 60px;
+  }
+
+  .whats-new-home h1 {
+    font-size: 21px;
+  }
+
+  .ember-application.home.index .widget--featured-content {
+    padding: 0 10px;
+  }
+
+  .ember-application.home.page .widget--two-column .row .medium-6.columns {
+    padding: 1rem;
+  }
+
+  .layout__content--partners .widget__subtitle,
+  .layout__content--communities .widget__subtitle {
+    max-width: 100%;
+  }
+
+  .layout__content--partners .row .ember-view.editor-content {
+    padding: 35px;
+  }
+
+  .layout__content--partners .widget--three-column .row {
+    display: block;
+  }
+
+  .layout__content--partners .background-img {
+    display: none;
+  }
+
+  .career-pathing-header p.widget__subtitle {
+    max-width: 100%;
+  }
+
+  .career-pathing-header h2.widget__title {
+    font-size: 30px;
+  }
+
+  .layout__content--career-pathing.layout__content {
+    padding-bottom: 2rem;
+  }
+
+  .layout__content--partners h1.h2.widget__title, .layout__content--communities h1.h2.widget__title {
+    font-size: 30px;
+  }  
+
+  .layout__content--communities .medium-6.columns {
+    padding: 1rem !important;
+  }
+
+  .layout__content--communities .forum-column {
+    padding: 2rem;
+  }
+
+  .layout__content--communities .forum-column button {
+    font-size: 12px;
+    width: 52%;
+    left: 24%;
+  }
+
+  .layout__content--communities .forum-column h3, .layout__content--communities .forum-column h1 {
+    font-size: 18px;
+  }
+
+  .layout__content--communities .forum-column h1 {
+    font-size: 20px;
+  }
+
+  .layout__content--communities .forum-column img {
+    width: 100px;
+  }
+
+  .layout__content--communities .forum-column {
+    min-height: 500px;
   }
 }
